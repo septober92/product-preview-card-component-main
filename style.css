@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Primary Colors*/
+
+  --dark-cyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+
+  /* Neutral Colors */
+
+  --very-dark-blue: hsl(212, 21%, 14%);
+  --dark-grayish-blue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  /* Typography */
+  --font-para: 'Montserrat', sans-serif;
+  --font-hdg: 'Fraunces', serif;
+}
+
+html {
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 30px;
+  background-color: var(--cream);
+  font-family: var(--font-para);
+}
+
+.product-preview-container {
+  display: flex;
+  flex-direction: row;
+  width: 600px;
+  height: 450px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.image-preview {
+  flex-basis: 50%;
+}
+
+.image-preview img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.product-preview {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 50%;
+  padding: 35px 32px 32px;
+  background-color: var(--white);
+}
+
+.product-preview span {
+  color: var(--dark-grayish-blue);
+  font-size: 1rem;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.product-preview h1 {
+  color: var(--very-dark-blue);
+  font-family: var(--font-hdg);
+  font-weight: 700;
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.product-preview p {
+  color: var(--dark-grayish-blue);
+  line-height: 1.8;
+}
+
+.price-box {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.price-new {
+  color: var(--dark-cyan);
+  font-family: var(--font-hdg);
+  font-size: 2.3rem;
+  font-weight: 700;
+  margin-right: 25px;
+}
+
+.price-old {
+  color: var(--dark-grayish-blue);
+  text-decoration: line-through;
+}
+
+.btn {
+  display: flex;
+  align-items: center;
+  color: var(--white);
+  text-decoration: none;
+  cursor: pointer;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.4)) top/100% 800%;
+  background-color: var(--dark-cyan);
+  padding: 15px 62px;
+  font-weight: 700;
+  border-radius: 8px;
+  transition: all 0.5s ease;
+}
+
+.icon {
+  width: 16px;
+  height: 15px;
+  margin-right: 10px;
+}
+
+.btn:hover {
+  background-position: bottom;
+}
+
+@media (max-width: 550px) {
+  .product-preview-container {
+    flex-direction: column;
+    max-width: 343px;
+    height: 611px;
+  }
+
+  .image-preview img {
+  }
+}
