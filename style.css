@@ -50,6 +50,7 @@ main {
 
 .image-preview {
   flex-basis: 50%;
+  overflow: hidden;
 }
 
 .image-preview img {
@@ -138,5 +139,23 @@ main {
   }
 
   .image-preview img {
+    flex-basis: 30%;
+  }
+
+  .product-preview {
+    padding: 25px 24px 24px;
+  }
+
+  .product-preview h1 {
+    font-size: 2.4rem;
+    margin: 20px 0 25px;
+  }
+
+  .product-preview p {
+    margin-bottom: 25px;
+  }
+
+  .price-box {
+    margin-bottom: 20px;
   }
 }
