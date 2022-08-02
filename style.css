@@ -46,6 +46,7 @@ main {
   height: 450px;
   border-radius: 10px;
   overflow: hidden;
+  box-shadow: 0 10px 50px rgba(106, 106, 106, 0.15);
 }
 
 .image-preview {
@@ -74,7 +75,7 @@ main {
 
 .product-preview span {
   color: var(--dark-grayish-blue);
-  font-size: 1rem;
+  font-size: 0.87rem;
   letter-spacing: 5px;
   text-transform: uppercase;
 }
@@ -89,7 +90,7 @@ main {
 
 .product-preview p {
   color: var(--dark-grayish-blue);
-  line-height: 1.8;
+  line-height: 1.6;
 }
 
 .price-box {
@@ -103,17 +104,19 @@ main {
   font-family: var(--font-hdg);
   font-size: 2.3rem;
   font-weight: 700;
-  margin-right: 25px;
+  margin-right: 20px;
 }
 
 .price-old {
   color: var(--dark-grayish-blue);
+  font-size: 1rem;
   text-decoration: line-through;
 }
 
 .btn {
   display: flex;
   align-items: center;
+  justify-content: center;
   color: var(--white);
   text-decoration: none;
   cursor: pointer;
@@ -143,7 +146,7 @@ main {
   .product-preview-container {
     flex-direction: column;
     max-width: 343px;
-    height: 650px;
+    height: 616px;
   }
 
   .image-preview {
@@ -157,18 +160,17 @@ main {
   .image-mobile {
     display: block;
     object-fit: cover;
-    object-position: center -10%;
     width: 100%;
     height: 100%;
   }
 
   .product-preview {
-    padding: 27px 24px 24px;
+    padding: 24px;
   }
 
   .product-preview h1 {
     font-size: 2.4rem;
-    margin: 20px 0 15px;
+    margin: 15px 0 15px;
   }
 
   .product-preview p {
@@ -178,7 +180,22 @@ main {
   .price-box {
     margin-bottom: 20px;
   }
+}
 
-  .btn {
-  }
+footer {
+  padding: 5px 0;
+  color: var(--very-dark-blue);
+  text-align: center;
+  font-family: var(--font-para);
+  font-size: 0.9rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--dark-cyan);
+  font-weight: 700;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
