@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
 
 *,
-::after,
-::before {
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -53,10 +53,14 @@ main {
   overflow: hidden;
 }
 
-.image-preview img {
+.image-desktop {
   object-fit: cover;
   width: 100%;
   height: 100%;
+}
+
+.image-mobile {
+  display: none;
 }
 
 .product-preview {
@@ -132,30 +136,49 @@ main {
 }
 
 @media (max-width: 550px) {
+  main {
+    padding: 15px;
+  }
+
   .product-preview-container {
     flex-direction: column;
     max-width: 343px;
-    height: 611px;
+    height: 650px;
   }
 
-  .image-preview img {
-    flex-basis: 30%;
+  .image-preview {
+    min-height: 240px;
+  }
+
+  .image-desktop {
+    display: none;
+  }
+
+  .image-mobile {
+    display: block;
+    object-fit: cover;
+    object-position: center -10%;
+    width: 100%;
+    height: 100%;
   }
 
   .product-preview {
-    padding: 25px 24px 24px;
+    padding: 27px 24px 24px;
   }
 
   .product-preview h1 {
     font-size: 2.4rem;
-    margin: 20px 0 25px;
+    margin: 20px 0 15px;
   }
 
   .product-preview p {
-    margin-bottom: 25px;
+    margin-bottom: 20px;
   }
 
   .price-box {
     margin-bottom: 20px;
+  }
+
+  .btn {
   }
 }
