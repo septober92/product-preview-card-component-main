@@ -128,7 +128,7 @@ main {
   transition: all 0.5s ease;
 }
 
-.icon {
+.btn .icon {
   width: 16px;
   height: 15px;
   margin-right: 10px;
@@ -136,6 +136,12 @@ main {
 
 .btn:hover {
   background-position: bottom;
+}
+
+@media (max-width: 656px) {
+  .btn {
+    padding: 15px 40px;
+  }
 }
 
 @media (max-width: 550px) {
@@ -179,6 +185,14 @@ main {
 
   .price-box {
     margin-bottom: 20px;
+  }
+
+  .btn {
+    flex-direction: row;
+  }
+
+  .btn .icon {
+    margin: 0 10px 0 0;
   }
 }
 
